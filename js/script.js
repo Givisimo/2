@@ -15,11 +15,11 @@ while (true) {
   if (numbers.length > 0 ) {
     for (let i = 0; i < numbers.length; i += 1) {
     total = total + input;
-    break;
-    }
+        break;
   }
-  console.log(`Общая сумма чисел равна ${total}`);
+  }
 }
+console.log(`Общая сумма чисел равна ${total}`);
 
 
 
