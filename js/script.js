@@ -7,22 +7,18 @@ let total = 0;
 
 while (true) {
   input = prompt("Введите число :");
-  if (input === null){
+  if (input === null) {
     break;
   }
   input = Number(input);
   numbers.push(input);
-  for (const valueUser of numbers) {
-    total = total + input;
-    break;
-  }
 }
 if (numbers.length> 0) {
+  for (const valueUser of numbers) {
+    total += valueUser;
+  }
   console.log(`Общая сумма чисел равна ${total}`);
 }
-
-
-
 
 
 //--------------------2----------------------------
@@ -30,7 +26,7 @@ if (numbers.length> 0) {
 const passwords = ['qwerty', '111qwe', '123123', 'r4nd0mp4zzw0rd'];
 let attemptsLeft = 3;
 
-while (attemptsLeft > 0) {
+while (attemptsLeft !== 0) {
   let userInput = prompt("Введите пароль");
   if (userInput === null){
     alert("Отмена");
@@ -40,7 +36,7 @@ while (attemptsLeft > 0) {
     alert('Добро пожаловать!');
     break;
   }
-   attemptsLeft = attemptsLeft - 1;
+   attemptsLeft -= 1;
     if (!attemptsLeft) {
       alert(`У вас закончились попытки, аккаунт заблокирован!`);
       break;
